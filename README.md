@@ -38,10 +38,6 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ### Pages
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+- [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+{% endfor %}
